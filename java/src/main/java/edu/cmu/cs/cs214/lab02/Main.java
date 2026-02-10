@@ -1,13 +1,23 @@
 package edu.cmu.cs.cs214.lab02;
 
+import edu.cmu.cs.cs214.lab02.shapes.Circle;
 import edu.cmu.cs.cs214.lab02.shapes.Rectangle;
+import edu.cmu.cs.cs214.lab02.shapes.Shape;
+import edu.cmu.cs.cs214.lab02.shapes.Square;
 
 public class Main {
     public static void main(String[] args) {
-        Rectangle rectangle = new Rectangle(2, 3);
+        Shape shape = new Rectangle(10, 5);
+        Renderer renderer = new Renderer();
 
-        Renderer renderer = new Renderer(rectangle);
+        Shape shape2 = new Circle(10);
+        Renderer renderer2 = new Renderer();
 
-        renderer.draw();
+        Shape shape3 = new Square(5);
+        Renderer renderer3 = new Renderer();
+
+        renderer.render(shape);
+        renderer2.render(shape2);
+        renderer3.render(shape3);
     }
 }

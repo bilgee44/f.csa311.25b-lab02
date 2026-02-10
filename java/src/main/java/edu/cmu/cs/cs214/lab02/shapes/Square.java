@@ -10,4 +10,10 @@ public class Square implements Shape {
     public double getArea() {
         return sideLen * sideLen;
     }
+
+    @Override
+    public void draw() {
+         System.out.println("Drawing a square with side length " + sideLen);
+        // Implementation for drawing a square
+    }
 }
