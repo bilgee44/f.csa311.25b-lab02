@@ -10,8 +10,13 @@ public class Rectangle implements Shape {
         this.height = height;
     }
 
+    public double getArea() {
+        return width * height;
+    }
+
     @Override
     public void draw() {
         System.out.println("Drawing rectangle " + width + "x" + height);
+        System.out.println("Area of the rectangle: " + getArea());
     }
 }
